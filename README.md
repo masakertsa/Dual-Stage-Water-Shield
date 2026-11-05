@@ -31,7 +31,7 @@ To prevent catastrophic fluid decompression caused by high-velocity micrometeoro
 *   **The AI-Monitored Isolation Bypass (Emergency Cut-Off):** Each individual quartz cell is equipped with a dedicated, electronically controlled bypass micro-pipe loop monitored 24/7 by the ship's local 0-latency AI network.
     1.  **Spectroscopic Monitoring:** The AI uses optical sensors to continuously scan the health, chlorophyll density, and metabolic gas output of each parallel quartz cell.
     2.  **Instant Contamination Intercept:** If radiation mutation, viral infection, or bacterial contamination is detected in a specific cell, the AI triggers a high-speed magnetic valve within milliseconds.
-    3.  **Complete Isolation:** The compromised quartz unit is immediately cut off and sealed from the primary atmospheric circulation loop. The air and greywater lines bypass the infected module entirely, keeping the remaining 99% of the parallelized biosfääri perfectly clean, unpolluted, and operational.
+    3.  **Complete Isolation:** The compromised quartz unit is immediately cut off and sealed from the primary atmospheric circulation loop. The air and greywater lines bypass the infected module entirely, keeping the remaining 99% of the parallelized biosphere perfectly clean, unpolluted, and operational.
 *   **Atmospheric Lifeline:** The active, healthy algae cells continue processing carbon dioxide ($CO_2$) exhaled by the crew back into breathable oxygen ($O_2$) without any pressure drops during isolation events.
 
 ---
@@ -48,11 +48,6 @@ To accelerate DNA and cellular repair from deep-space radiation, the crew underg
 ---
 
 ## 📄 License
-
-This project is licensed under the **MIT License** – preserving the original architecture credited to the creator.
-
-Copyright (c) 2026 masakertsa
-
 
 This project is licensed under the **MIT License** – preserving the original architecture credited to the creator.
 
