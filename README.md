@@ -5,6 +5,26 @@ This project introduces a high-logic, multi-functional closed-loop ecosystem opt
 ---
 
 ## 🛠️ 1. Mechanical & Tandem Energy Architecture
+```mermaid
+graph TD
+    subgraph "Outer Surface Layer"
+        A[Viscoelastic STF Layer] -->|Instant hardening on impact| B[Micrometeoroid Intercept]
+        C[Pressure-Driven Cross-Linking Polymers] -->|Freeze-plug seal in vacuum| B
+    end
+
+    subgraph "1.2-Meter Compartmentalized Shield"
+        D[Asteroid Water Envelope] -->|Scintillation: Cosmic rays to visible light| E[Quartz-Encapsulated Perovskite Cells]
+        D -->|Acoustic mats & micro-cells| F[Anti-Water-Hammer Shock Dispersion]
+        G[Active Water Circulation Loops] -->|Sun-facing vs. Shadow delta| H[Seebeck Thermo-Electric Generators]
+    end
+
+    E -->|Generates kW Power| Power([Ship Power Grid])
+    H -->|Generates kW Power| Power
+
+    style A fill:#EC7063,stroke:#333,stroke-width:2px
+    style D fill:#85C1E9,stroke:#333,stroke-width:2px
+    style E fill:#F4D03F,stroke:#333,stroke-width:2px
+```
 
 The spacecraft hull is encapsulated by an optimized 1.2-meter (120 cm) compartmentalized composite shell. This thickness serves as the mechanical and thermal "sweet-spot," balancing heavy radiation shielding with agile reaction control speed during high-speed orbital maneuvers.
 
