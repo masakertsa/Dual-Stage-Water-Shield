@@ -46,6 +46,22 @@ To prevent catastrophic fluid decompression caused by high-velocity micrometeoro
 ---
 
 ## 🧬 3. Atmospheric Integration & Bio-Compartments (AI-Isolated Networks)
+```mermaid
+graph TD
+    Start[Primary Atmospheric Loop] --> Scan[AI Optical Sensors: Scan Chlorophyll & Gas Output]
+    Scan --> Condition{Contamination Detected?}
+    
+    Condition -->|No| Normal[Normal Operation: Process CO2 to O2]
+    Normal --> Scan
+    
+    Condition -->|Yes| Action[AI Activates High-Speed Magnetic Valves]
+    Action --> Isolate[Isolate Compromised Quartz Bioreactor Cell]
+    Isolate --> Bypass[Atmosphere Redirected via Micro-Pipe Loop]
+    Bypass --> Maintain[Remaining 99% Biosphere Stays Operational]
+
+    style Condition fill:#F5B041,stroke:#333,stroke-width:2px
+    style Action fill:#EC7063,stroke:#333,stroke-width:2px
+```
 
 *   **Parallelized Quartz Bioreactor Cell Units:** The life-support bio-envelope does not rely on a single large reservoir. Instead, it is divided into a parallelized network of independent, compact bioreactor tubes constructed from high-purity **quartz glass**. Quartz ensures 100% UV/visible light transmission from the scintillation layer directly into the *Chlorella* algae cultures while serving as a chemically inert, rigid boundary.
 *   **The AI-Monitored Isolation Bypass (Emergency Cut-Off):** Each individual quartz cell is equipped with a dedicated, electronically controlled bypass micro-pipe loop monitored 24/7 by the ship's local 0-latency AI network.
