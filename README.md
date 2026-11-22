@@ -29,7 +29,7 @@ graph TD
 The spacecraft hull is encapsulated by an optimized 1.2-meter (120 cm) compartmentalized composite shell. This thickness serves as the mechanical and thermal "sweet-spot," balancing heavy radiation shielding with agile reaction control speed during high-speed orbital maneuvers.
 
 *   **Tandem Power Harvesting:** The system extracts clean energy from environmental hazards on two simultaneous layers:
-    1.  **Photo-Electric Layer (Perovskite Matrix):** The hydrogen-rich asteroid water envelope intercepts cosmic rays, shifting ionizing radiation down into visible light via the scintillation effect. Submerged, quartz-encapsulated Perovskite solar cells absorb this light, converting it into electricity.
+    1.  **Photo-Electric Layer (Perovskite Matrix):** The hydrogen-rich asteroid water envelope intercepts cosmic rays, shifting ionizing radiation down into visible light via Cherenkov radiation and the scintillation effect. Submerged, quartz-encapsulated Perovskite solar cells absorb this light, converting it into electricity.
     2.  **Thermo-Electric Layer (Seebeck Circulation):** Deep space creates extreme temperature differentials between the sun-facing hull (hot) and shadow sectors (cold). By actively circulating warm water through the compartmentalized loops, the ship balances its internal temperature completely passively, while integrated thermo-electric generators harvest the temperature delta directly into additional kW power.
 *   **The Anti-Water-Hammer Matrix:** The liquid bulk is divided into hundreds of isolated micro-compartments and acoustic damping mats. When docking with high-speed orbital structures, structural kinetic shockwaves are instantly dispersed across the cell walls, preventing destructive water-hammer effects and protecting delicate internal electronics.
 
@@ -40,7 +40,7 @@ The spacecraft hull is encapsulated by an optimized 1.2-meter (120 cm) compartme
 To prevent catastrophic fluid decompression caused by high-velocity micrometeoroids or space debris punctures, the absolute outer surface of the 1.2-meter shield is lined with an autogenous self-healing material matrix operating in tandem with the inner fluid dynamics:
 
 *   **Viscoelastic Shear-Thickening Fluid (STF):** The outer skin features a high-density, polymer-based self-healing gel layer. Under normal conditions, the material remains highly flexible and viscoelastic. However, upon high-velocity impact, the immense mechanical shear force forces the molecules to instantly lock together, forming a temporary solid barrier around the puncture zone to minimize initial mass loss.
-*   **Pressure-Driven Cross-Linking:** When a micro-debris puncture breaches the core water envelope, the internal hydro-pressure forces the escaping water and embedded bio-polymers outward into the vacuum of space. As the specialized fluid compounds encounter the drop in pressure and thermal temperature shift at the exit wound, a rapid chemical cross-linking polymerization is triggered.
+*   **Pressure-Driven Cross-Linking:** When a micro-debris puncture breaches the core water envelope, the internal hydro-pressure forces the escaping water and embedded bio-polymers outward into the vacuum of space. As the specialized fluid compounds encounter the drop in pressure and cryogenic temperature drop at the exit wound, a rapid chemical cross-linking polymerization is triggered.
 *   **Instant Freeze-Plug Seal:** The expanding cross-linked gel reacts with the freezing void, curing within seconds to form a permanent, airtight, and structurally sound plug. The hull heals its own puncture autonomously without requiring spacewalks or human maintenance.
 
 ---
@@ -78,7 +78,7 @@ To accelerate DNA and cellular repair from deep-space radiation, the crew underg
 
 1.  **Fluid Immersion Training:** Astronauts execute physical exercises inside localized fluid immersion tanks (leveraging Pascal's Principle to equalize mechanical stress across the entire body substrate).
 2.  **Hypoxic Mountain-Mask Simulation:** During the immersion training, the crew wears specialized resistance masks that simulate a low-oxygen (hypoxic), high-altitude atmosphere. This controlled, non-destructive stress environment forces the human biological system into immediate **Autophagy**.
-3.  **The Autophagic Cleaning Cycle:** Autophagy acts as the body's internal recycling mechanism, rapidly dismantling and digesting damaged proteins, mutated cellular walls, and radiation-induced DNA errors caused by any leaking cosmic rays.
+3.  **The Autophagic Cleaning Cycle:** Autophagy acts as the body's internal recycling mechanism, rapidly dismantling and digesting damaged proteins, radiation-damaged organelles, and mutated cellular structures by any leaking cosmic rays.
 4.  **Hypoallergenic Rebuilding:** Immediately post-training, when cells are hyper-receptive to nutrient uptake, the crew is fed a specialized blend of plant- and seed-based proteins (such as hemp and bioreactor-grown algae). This hypoallergenic, zero-animal-protein matrix completely eliminates structural immune rejection or allergic shock risks, allowing the body to rapidly construct new, radiation-free cellular tissue.
 
 ---
