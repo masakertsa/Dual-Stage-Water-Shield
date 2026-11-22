@@ -6,10 +6,11 @@ radiation attenuation, self-healing chemical kinetics, and AI bioreactor bypass 
 
 import math
 
+
 def calculate_radiation_attenuation(water_layer_thickness=1.2, cosmic_ray_flux=1.0):
     """
     Calculates the cosmic radiation reduction through the 1.2-meter water envelope.
-    Models the scintillation effect converting ionizing radiation to visible light wavelengths.
+    Models Cherenkov and scintillation effects converting ionizing radiation to visible/UV wavelengths.
     Uses the exponential decay law (Beer-Lambert equivalent) for radiation attenuation.
     
     Parameters:
@@ -22,22 +23,21 @@ def calculate_radiation_attenuation(water_layer_thickness=1.2, cosmic_ray_flux=1
     if water_layer_thickness <= 0 or cosmic_ray_flux <= 0:
         return (0.0, 0.0)
         
-    # Attenuation coefficient for water against high-energy cosmic rays (in m^-1)
-    # Water is hydrogen-rich, making it highly effective at absorbing and scattering cosmic protons.
-    attenuation_coefficient = 3.5  
+    # Effective macroscopic attenuation coefficient for water against high-energy cosmic rays (in m^-1)
+    attenuation_coefficient = 1.45  
     
     # Calculate remaining radiation using exponential decay: I = I0 * e^(-mu * x)
     remaining_radiation = cosmic_ray_flux * math.exp(-attenuation_coefficient * water_layer_thickness)
     
-    # Scintillation efficiency: amount of ionizing energy converted down to visible light wavelengths
-    scintillation_efficiency = 0.12  # 12% conversion rate into the optical spectrum
+    # Scintillation & Cherenkov quantum yield: fraction converted to optical wavelengths
+    optical_conversion_efficiency = 0.12  
     
     # Convert absorbed radiation flux into equivalent optical light energy flux
     absorbed_radiation = cosmic_ray_flux - remaining_radiation
-    # Conversion factor from Sievert flux density equivalents to optical energy density (W/m^2)
-    energy_conversion_factor = 250.0  
+    # Empirical scaling factor converting Sievert flux equivalents to optical energy density (W/m^2)
+    empirical_flux_scaling = 250.0  
     
-    light_energy_flux = absorbed_radiation * energy_conversion_factor * scintillation_efficiency
+    light_energy_flux = absorbed_radiation * empirical_flux_scaling * optical_conversion_efficiency
     
     return (round(remaining_radiation, 6), round(light_energy_flux, 2))
 
@@ -53,7 +53,7 @@ def estimate_seebeck_power_output(sun_side_temp, shadow_side_temp, flow_rate):
     - flow_rate (float): Active circulation loop flow rate in liters/second.
     
     Returns:
-    - float: Total generated power in kilowatts (kW).
+    - float: Net harvested electrical power in kilowatts (kW).
     """
     if sun_side_temp <= shadow_side_temp or flow_rate <= 0:
         return 0.0
@@ -72,12 +72,15 @@ def estimate_seebeck_power_output(sun_side_temp, shadow_side_temp, flow_rate):
     # Calculate open-circuit voltage: V = N * alpha * dT
     open_circuit_voltage = number_of_junctions * seebeck_coefficient * temp_delta
     
-    # Maximum power transfer theorem: P = V^2 / (4 * R)
-    max_electrical_power_watts = (open_circuit_voltage ** 2) / (4 * internal_resistance)
+    # Theoretical maximum electrical power transfer: P = V^2 / (4 * R)
+    theoretical_max_watts = (open_circuit_voltage ** 2) / (4 * internal_resistance)
+    
+    # Realistic thermoelectric conversion efficiency factor (accounting for thermal losses)
+    teg_conversion_efficiency = 0.075  # 7.5% net system efficiency
     
     # Scale power based on the fluid dynamic heat supply capacity (flow rate limits efficiency)
     fluid_efficiency_factor = min(1.0, flow_rate / 5.0)
-    final_power_kw = (max_electrical_power_watts * fluid_efficiency_factor) / 1000.0
+    final_power_kw = (theoretical_max_watts * teg_conversion_efficiency * fluid_efficiency_factor) / 1000.0
     
     return round(final_power_kw, 2)
 
@@ -92,7 +95,7 @@ def simulate_self_healing_kinetics(puncture_diameter, internal_pressure):
     - internal_pressure (float): Atmospheric internal vessel pressure in kiloPascals (kPa).
     
     Returns:
-    - bool: True if the autogenous freeze-plug seal seals successfully, False if decompression occurs.
+    - bool: True if the autogenous freeze-plug seal cures successfully, False if decompression occurs.
     """
     if puncture_diameter <= 0 or internal_pressure <= 0:
         return False
@@ -103,17 +106,14 @@ def simulate_self_healing_kinetics(puncture_diameter, internal_pressure):
     if puncture_diameter > critical_breach_threshold:
         return False  # Structural failure requires mechanical patching
         
-    # Curing and freeze-plug rate factor dictated by outer space thermal drop and pressure drop
-    cross_linking_rate_constant = 0.85  
+    # Rapid curing and flash-freezing rate constant in cryogenic vacuum
+    cross_linking_rate_constant = 2.40  
     
     # Time required for the gel polymer matrix to seal the boundary completely (seconds)
     time_to_seal = (puncture_diameter * internal_pressure) / (100.0 * cross_linking_rate_constant)
     
-    # The vessel must seal within a 4-second structural window to prevent catastrophic mass depletion
-    if time_to_seal <= 4.0:
-        return True
-    else:
-        return False
+    # The vessel must seal within a 4.0-second structural window to prevent catastrophic mass depletion
+    return time_to_seal <= 4.0
 
 
 def monitor_bioreactor_gas_exchange(cell_id, chlorophyll_density):
@@ -126,19 +126,20 @@ def monitor_bioreactor_gas_exchange(cell_id, chlorophyll_density):
     - chlorophyll_density (float): Current scanned density profile (normalized 0.0 to 1.0).
     
     Returns:
-    - str: "OPERATIONAL", "BYPASS_ISOLATED", or "CRITICAL_SYSTEM_ALERT"
+    - dict: Status report containing cell_id and operational state.
     """
     # Critical threshold: mutation or toxic infection drops chlorophyll density below 0.35
     critical_mutation_threshold = 0.35
     
     if chlorophyll_density < 0.0 or chlorophyll_density > 1.0:
-        return "CRITICAL_SYSTEM_ALERT"
-        
-    if chlorophyll_density < critical_mutation_threshold:
+        status = "CRITICAL_SYSTEM_ALERT"
+    elif chlorophyll_density < critical_mutation_threshold:
         # 0-latency AI network activates magnetic valves to redirect the local atmospheric lines
-        return "BYPASS_ISOLATED"
+        status = "BYPASS_ISOLATED"
+    else:
+        status = "OPERATIONAL"
         
-    return "OPERATIONAL"
+    return {"cell_id": cell_id, "status": status}
 
 
 if __name__ == "__main__":
@@ -146,16 +147,16 @@ if __name__ == "__main__":
     
     # 1. Test Radiation Attenuation through the 1.2-meter envelope (Input: 1.5 Sv/h solar flare environment)
     remaining_rad, light_flux = calculate_radiation_attenuation(1.2, 1.5)
-    print(f"1. Remaining Radiation: {remaining_rad} Sv/h | Generated Scintillation Light: {light_flux} W/m^2")
+    print(f"1. Remaining Radiation: {remaining_rad} Sv/h | Generated Optical Flux: {light_flux} W/m^2")
     
     # 2. Test Thermoelectric Seebeck Harvesting (Sun-side = 390K, Shadow-side = 120K, Flow = 3.5 L/s)
     harvested_power = estimate_seebeck_power_output(390, 120, 3.5)
     print(f"2. Harvested Thermoelectric Power: {harvested_power} kW")
     
-    # 3. Test Self-Healing Kinetics against a 8mm micrometeoroid breach at 101.3 kPa internal pressure
+    # 3. Test Self-Healing Kinetics against an 8mm micrometeoroid breach at 101.3 kPa internal pressure
     sealed_successfully = simulate_self_healing_kinetics(8.0, 101.3)
     print(f"3. Autogenous Puncture Seal Status: {'SUCCESSFUL (Plug Cured)' if sealed_successfully else 'FAILED (Decompression)'}")
     
     # 4. Test AI Spectroscopic Monitoring loop on a healthy quartz bioreactor cell
-    reactor_status = monitor_bioreactor_gas_exchange(101, 0.78)
-    print(f"4. Quartz Bioreactor Cell #101 Status: {reactor_status}")
+    reactor_report = monitor_bioreactor_gas_exchange(101, 0.78)
+    print(f"4. Quartz Bioreactor Cell #{reactor_report['cell_id']} Status: {reactor_report['status']}")
