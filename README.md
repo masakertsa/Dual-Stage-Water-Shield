@@ -78,7 +78,7 @@ To accelerate DNA and cellular repair from deep-space radiation, the crew underg
 
 1.  **Fluid Immersion Training:** Astronauts execute physical exercises inside localized fluid immersion tanks (leveraging Pascal's Principle to equalize mechanical stress across the entire body substrate).
 2.  **Hypoxic Mountain-Mask Simulation:** During the immersion training, the crew wears specialized resistance masks that simulate a low-oxygen (hypoxic), high-altitude atmosphere. This controlled, non-destructive stress environment forces the human biological system into immediate **Autophagy**.
-3.  **The Autophagic Cleaning Cycle:** Autophagy acts as the body's internal recycling mechanism, rapidly dismantling and digesting damaged proteins, radiation-damaged organelles, and mutated cellular structures by any leaking cosmic rays.
+3.  **The Autophagic Cleaning Cycle:** Autophagy acts as the body's internal recycling mechanism, rapidly dismantling and digesting damaged proteins, radiation-damaged organelles, and mutated cellular structures caused by any leaking cosmic rays.
 4.  **Hypoallergenic Rebuilding:** Immediately post-training, when cells are hyper-receptive to nutrient uptake, the crew is fed a specialized blend of plant- and seed-based proteins (such as hemp and bioreactor-grown algae). This hypoallergenic, zero-animal-protein matrix completely eliminates structural immune rejection or allergic shock risks, allowing the body to rapidly construct new, radiation-free cellular tissue.
 
 ---
