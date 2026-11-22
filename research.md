@@ -6,10 +6,10 @@ This document provides the mathematical, thermodynamic, and fluid dynamic founda
 
 ## 1. Energy Harvesting Kinetics & Tandem Power Co-Generation
 
-The 1.2-meter fluid volume operates as a multi-layered thermodynamic energy converter by exploiting quantum scintillation and the Seebeck effect.
+The 1.2-meter fluid volume operates as a multi-layered thermodynamic energy converter by exploiting quantum scintillation, Cherenkov radiation, and the Seebeck effect.
 
-*   **Scintillation Photon Shift (Photo-Electric Layer):** High-energy cosmic rays (HZE ions and solar protons) possess dangerous ionizing radiation. When these particles collide with the dense hydrogen atoms of the asteroid-mined water envelope, their kinetic energy is absorbed and shifted down the electromagnetic spectrum into visible and UV light wavelengths. Submerged Perovskite cells absorb these secondary photons, converting the hazard directly into electrical kilowatts (kW) while the fluid matrix acts as a cooling jacket.
-*   **Thermo-Electric Seebeck Effect (Thermal Layer):** In deep space, the sun-facing hull absorbs intense thermal radiation, while the shadow-facing hull radiates heat into the absolute void (minus 270 degrees C). This extreme temperature delta creates a natural thermal gradient. By actively circulating the warm water through compartmentalized loops, integrated thermo-electric generators harvest this Seebeck differential directly into continuous secondary electrical currents.
+* **Scintillation & Cherenkov Photon Shift (Photo-Electric Layer):** High-energy cosmic rays (HZE ions and solar protons) carry hazardous ionizing radiation. When these relativistic particles traverse the dense, hydrogen-rich asteroid-mined water envelope, they induce Cherenkov radiation and scintillation, shifting their kinetic energy down the electromagnetic spectrum into visible and UV wavelengths. Submerged, quartz-encapsulated Perovskite cells absorb these secondary photons, converting the radiation hazard directly into electrical kilowatts (kW) while the surrounding fluid matrix acts as a thermal cooling jacket.
+* **Thermo-Electric Seebeck Effect (Thermal Layer):** In deep space, the sun-facing hull absorbs intense solar thermal radiation, while the shadow-facing hull radiates heat toward the cosmic microwave background (~2.7 K or -270.45 °C). This extreme temperature delta creates a steep thermal gradient. By actively circulating warmed fluid through compartmentalized loops, integrated bismuth telluride thermo-electric generators (TEGs) harvest this Seebeck differential directly into continuous secondary electrical currents.
 
 ---
 
@@ -17,17 +17,18 @@ The 1.2-meter fluid volume operates as a multi-layered thermodynamic energy conv
 
 The outer surface utilizes non-Newtonian fluid mechanics and pressure-drop polymerization to execute autonomous structural repairs.
 
-*   **Viscoelastic Shear-Thickening Fluid (STF) Dynamics:** The absolute outer skin contains a specialized polymer-based gel layer behaving as a non-Newtonian Shear-Thickening Fluid. Under low mechanical stress, the material remains highly flexible. However, upon hyper-velocity impact from a micrometeoroid, the extreme shear stress forces the suspended particles to instantly aggregate into a rigid, localized solid cluster, absorbing impact energy and minimizing initial mass puncture volume.
-*   **Pressure-Drop Autogenous Polymerization:** When a puncture breach occurs, the high internal hydro-pressure of the 1.2-meter water envelope forces the embedded bio-polymers outward into the vacuum of space. The violent phase transition—driven by the pressure drop from 1 bar down to 0 bar and the extreme cryogenic temperatures of space—triggers instantaneous chemical cross-linking. The expanding polymer matrix cures within seconds into a structural "freeze-plug", sealing the hull autonomously without human spacewalks.
+* **Viscoelastic Shear-Thickening Fluid (STF) Dynamics:** The outermost skin contains a specialized polymer-based gel layer behaving as a non-Newtonian Shear-Thickening Fluid. Under low mechanical stress, the material remains highly flexible. However, upon hyper-velocity impact from a micrometeoroid, extreme shear stress forces the suspended nanoparticles to instantly hydrocluster into a rigid, localized solid barrier, dissipating impact energy and minimizing initial puncture volume.
+* **Pressure-Drop Autogenous Polymerization:** When a puncture breach occurs, the internal hydrostatic pressure of the 1.2-meter water envelope (~101.3 kPa) forces embedded bio-polymers outward into the vacuum of space. The rapid phase transition—driven by the instantaneous pressure drop from 101.3 kPa down to vacuum (0 Pa) and cryogenic deep-space temperatures—triggers rapid chemical cross-linking. The expanding polymer matrix cures within seconds into a structural "freeze-plug," sealing the hull autonomously without requiring human spacewalks.
 
 ---
 
 ## 3. Hydrodynamics of Kinetic Shock Dissipation (Anti-Water-Hammer)
 
-Docking maneuvers with high-speed structures like Lunar Skyhooks generate immense kinetic shockwaves that could instantly fracture a single, monolithic liquid tank.
+Docking maneuvers with high-speed orbital structures—such as Lunar Skyhooks—generate immense kinetic shockwaves that could instantly fracture a single, monolithic liquid tank.
 
-*   **Fluid Momentum Attenuation:** The water shield is divided into hundreds of isolated micro-compartments and bio-acoustic damping mats. When a kinetic impact wave enters the hull, it cannot propagate as a massive shockwave (preventing the destructive water-hammer effect). 
-*   **Acoustic Wave Dispersion:** The pressure wave is split across thousands of small, flexible quartz-glass cells and rubberized damping barriers. The kinetic energy is converted into low-grade thermal energy within the liquid medium, preserving structural integrity and protecting the delicate cellular structures of the internal Chlorella algae bioreactors from acoustic destruction, keeping the remaining 99% of the parallelized biosphere perfectly clean and operational.
+* **Fluid Momentum Attenuation:** The water shield is partitioned into hundreds of isolated micro-compartments and bio-acoustic damping mats. When a kinetic impact wave enters the hull, it cannot propagate as a unified shockwave, effectively eliminating the destructive water-hammer effect.
+* **Acoustic Wave Dispersion:** The pressure wave is dispersed across thousands of small, flexible quartz-glass cells and elastomeric damping barriers. Kinetic energy is converted into low-grade thermal energy within the liquid medium, preserving structural integrity and shielding the delicate cellular structures of the internal *Chlorella* algae bioreactors from acoustic cavitation—keeping the remaining 99% of the parallelized biosphere uncontaminated and fully operational.
+
 ---
 
 ## 📄 License
