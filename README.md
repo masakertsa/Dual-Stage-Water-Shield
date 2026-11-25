@@ -28,6 +28,9 @@ graph TD
 
 The spacecraft hull is encapsulated by an optimized 1.2-meter (120 cm) compartmentalized composite shell. This thickness serves as the mechanical and thermal "sweet-spot," balancing heavy radiation shielding with agile reaction control speed during high-speed orbital maneuvers.
 
+### 🚀 Station-to-Station Cislunar Transfer Role
+Engineered specifically for orbital-to-orbital transit (such as shuttling crew and high-value cargo between a Low Earth Orbit staging hub and a Lunar Gateway), the vessel never enters a planetary atmosphere or gravity well. Eliminating heavy heat shields and landing gear allows the hull to dedicate its mass budget entirely to the 1.2-meter radiation shield, closed-loop life support, and zero-G crew conditioning—bridging surface launch systems (*Project MagShot*) with lunar surface infrastructure (*Project Lunar-Cradle*).
+
 *   **Tandem Power Harvesting:** The system extracts clean energy from environmental hazards on two simultaneous layers:
     1.  **Photo-Electric Layer (Perovskite Matrix):** The hydrogen-rich asteroid water envelope intercepts cosmic rays, shifting ionizing radiation down into visible light via Cherenkov radiation and the scintillation effect. Submerged, quartz-encapsulated Perovskite solar cells absorb this light, converting it into electricity.
     2.  **Thermo-Electric Layer (Seebeck Circulation):** Deep space creates extreme temperature differentials between the sun-facing hull (hot) and shadow sectors (cold). By actively circulating warm water through the compartmentalized loops, the ship balances its internal temperature completely passively, while integrated thermo-electric generators harvest the temperature delta directly into additional kW power.
